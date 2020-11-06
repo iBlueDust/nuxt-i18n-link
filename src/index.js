@@ -1,6 +1,11 @@
-import Vue from 'vue'
-import Component from './NuxtI18nLink.vue'
+import path from 'path'
 
-Vue.component('nuxt-i18n-link', Component)
+export default function nuxtI18nLink() {
+	this.addPlugin({
+		src: path.resolve(__dirname, 'plugin.js'),
+		ssr: false,
+		filename: 'nuxt-i18n-link.js',
+	})
+}
 
-export default Component
+export { default as meta } from '../package.json'

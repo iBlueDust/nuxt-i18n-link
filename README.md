@@ -32,7 +32,19 @@ npm i nuxt-i18n-link
 
 Note: Add `--save` if npm < 5.0.0
 
-Use like
+Then nuxt.config.js
+
+```
+{
+	...
+	modules: [
+		...
+		'nuxt-i18n-link'
+	]
+}
+```
+
+Finally, use like
 
 ```
 <nuxt-i18n-link to="/page" lang="en">
@@ -43,10 +55,10 @@ Use like
 ### Props
 
 <!-- prettier-ignore-start -->
-|Name    |Type    |Default   |Required|Description|
-|--------|--------|----------|--------|-----------------------------|
-|to      |string  |-         | [x]  |Destination Route            |
-|lang    |string  |undefined | [ ]  |Two-letter ISO language code |
+|Name    |Type            |Default   |Required|Description|
+|--------|----------------|----------|--------|-----------------------------|
+|to      |string \| object|-         | [x]  |Destination Route            |
+|lang    |string          |undefined | [ ]  |Two-letter ISO language code |
 <!-- prettier-ignore-end -->
 
 <br />
