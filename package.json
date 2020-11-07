@@ -1,6 +1,6 @@
 {
 	"name": "nuxt-i18n-link",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A convenient replacement for <nuxt-link> component when using nuxt-i18n",
 	"main": "src/index.js",
 	"types": "src/index.d.ts",
