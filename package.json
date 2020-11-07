@@ -17,6 +17,10 @@
 		"component",
 		"i18n"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/iBlueDust/nuxt-i18n-link"
+	},
 	"author": "iBlueDust",
 	"license": "MIT"
 }
