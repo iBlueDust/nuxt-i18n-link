@@ -1,12 +1,13 @@
 # nuxt-i18n-link
 
-<img src="http://img.shields.io/npm/v/nuxt-i18n-link" />
-<img src="http://img.shields.io/npm/l/nuxt-i18n-link" />
+<img style="display: inline-block;" src="http://img.shields.io/npm/v/nuxt-i18n-link" />
+<img style="display: inline-block;" src="https://img.shields.io/bundlephobia/min/nuxt-i18n-link" />
+<img style="display: inline-block;" src="http://img.shields.io/npm/l/nuxt-i18n-link" />
 
 A convenient replacement for `<nuxt-link>` component when using [nuxt-i18n](https://i18n.nuxtjs.org).
 It is simply a replacement for this exact code:
 
-```
+```vue
 <nuxt-link :to="localePath("/page")">
 	Link
 </nuxt-link>
@@ -14,7 +15,7 @@ It is simply a replacement for this exact code:
 
 into
 
-```
+```vue
 <nuxt-i18n-link to="/page">
 	Link
 </nuxt-i18n-link>
@@ -26,7 +27,7 @@ This prevents the mistake of omitting `localePath()` that would often fall under
 
 Install with
 
-```
+```bash
 npm i nuxt-i18n-link
 ```
 
@@ -34,11 +35,9 @@ Note: Add `--save` if npm < 5.0.0
 
 Then nuxt.config.js
 
-```
+```js
 {
-	...
 	modules: [
-		...
 		'nuxt-i18n-link'
 	]
 }
@@ -46,26 +45,34 @@ Then nuxt.config.js
 
 Finally, use like
 
-```
+```vue
 <nuxt-i18n-link to="/page" lang="en">
+	Link
+</nuxt-i18n-link>
+
+// or
+
+<nuxt-i18n-link to="{ path: '/page', hash: '#conclusion'}" lang="en">
 	Link
 </nuxt-i18n-link>
 ```
 
+For more details, see [router-link](https://router.vuejs.org/api/#router-link).
+
 ### Props
 
 <!-- prettier-ignore-start -->
-|Name    |Type            |Default   |Required|Description|
+|Name    |Type            |Default   |Required|Description                  |
 |--------|----------------|----------|--------|-----------------------------|
-|to      |string \| object|-         | [x]  |Destination Route            |
-|lang    |string          |undefined | [ ]  |Two-letter ISO language code |
+|to      |string \| object|-         | [x]    |Destination Route (see [router-link](https://router.vuejs.org/api/#router-link-props)) |
+|lang    |string          |undefined | [ ]    |Two-letter ISO language code |
 <!-- prettier-ignore-end -->
 
 <br />
 
 ## Motivation
 
-The use of `localePath()` in `<nuxt-link>` is necessary for [Nuxt.js](https://www.nuxtjs.org) projects.
+The use of `localePath()` in `<nuxt-link>` is necessary for [Nuxt.js](https://www.nuxtjs.org) projects that use [nuxt-i18n](https://i18n.nuxtjs.org).
 
 To demonstrate, say a project has two routes:
 

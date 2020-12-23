@@ -9,7 +9,7 @@ export default {
 	name: "nuxt-i18n-link",
 	props: {
 		to: {
-			type: String,
+			type: [String, Object],
 			required: true,
 		},
 		lang: String,
